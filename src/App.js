@@ -3,7 +3,7 @@ import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import React, {useState} from "react";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
 
@@ -39,17 +39,16 @@ function App() {
 
   return (
     <>    
-    {/* <Router> */}
+    <Router>
       <Navbar logoTitle="TextUtils" toggleMode={toggleMode} mode={mode} aboutText="About Us" />
       <Alert alert={alert} />
       <div className="container mt-5">
-      <TextForm  mode={mode} showAlert={showAlert} />
-        {/* <Routes>
+        <Routes>
             <Route path="/" element={<TextForm  mode={mode} showAlert={showAlert} />} />
             <Route path="/about" element={<About />} />
-        </Routes> */}
+        </Routes>
       </div>
-    {/* </Router> */}
+    </Router>
     </>
   );
 }
