@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-import {Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
 
 export default function Navbar(props) {
   return (
@@ -12,12 +12,12 @@ export default function Navbar(props) {
         </button>
         <div className="collapse navbar-collapse" id="mynavbar">
           <ul className="navbar-nav me-auto">
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link className="nav-link" to="/">Home</Link>
-            </li>
-            <li className="nav-item">
+            </li> */}
+            {/* <li className="nav-item">
               <Link className="nav-link" to="/about">{props.aboutText}</Link>
-            </li>
+            </li> */}
           </ul>
           <div className={`form-check form-switch text-${props.mode == 'light' ? 'dark' : 'light' }`}>
             <input className="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" onClick={props.toggleMode} />
