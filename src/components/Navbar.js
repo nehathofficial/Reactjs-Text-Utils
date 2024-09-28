@@ -6,7 +6,7 @@ export default function Navbar(props) {
   return (
     <nav className={`navbar navbar-expand-sm navbar-${props.mode} bg-${props.mode}`}>
       <div className="container-fluid">
-        <a className="navbar-brand" to="/">{props.logoTitle}</a>
+        <Link className="navbar-brand" to="/">{props.logoTitle}</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -19,7 +19,7 @@ export default function Navbar(props) {
               <Link className="nav-link" to="/about">{props.aboutText}</Link>
             </li>
           </ul>
-          <div className={`form-check form-switch text-${props.mode == 'light' ? 'dark' : 'light' }`}>
+          <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark' : 'light' }`}>
             <input className="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" onClick={props.toggleMode} />
             <label className="form-check-label" htmlFor="mySwitch">Enable Dark Mode</label>
           </div> 

@@ -1,5 +1,6 @@
 import About from "./components/About";
 import Alert from "./components/Alert";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import React, {useState} from "react";
@@ -48,6 +49,7 @@ function App() {
             <Route path="/about" element={<About />} />
         </Routes>
       </div>
+      <Footer mode={mode} />
     </Router>
     </>
   );
