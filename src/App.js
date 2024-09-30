@@ -1,10 +1,10 @@
-import About from "./components/About";
+//import About from "./components/About";
 import Alert from "./components/Alert";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import React, {useState} from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
 
@@ -40,17 +40,18 @@ function App() {
 
   return (
     <>    
-    <Router>
+    {/* <Router> */}
       <Navbar logoTitle="TextUtils" toggleMode={toggleMode} mode={mode} aboutText="About Us" />
       <Alert alert={alert} />
       <div className="container mt-5">
-        <Routes>
+        {/* <Routes>
             <Route path="/" element={<TextForm  mode={mode} showAlert={showAlert} />} />
             <Route path="/about" element={<About />} />
-        </Routes>
+        </Routes> */}
+        <TextForm  mode={mode} showAlert={showAlert} />
       </div>
       <Footer mode={mode} />
-    </Router>
+    {/* </Router> */}
     </>
   );
 }
